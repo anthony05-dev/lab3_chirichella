@@ -1,3 +1,15 @@
+
+/*  * Project: Lab3
+    * Purpose Details: Mongo and MySQL implementation
+    * Course: IST 242
+    * Author: Anthony Chirichella
+    * Date Developed: 2/27/26
+    * Last Date Changed: 3/1/26
+    * Rev: 1
+ */
+
+
+
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
