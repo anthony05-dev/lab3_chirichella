@@ -26,7 +26,10 @@ public class MySQL {
             connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
 
             // Create
-            insertCustomer(connection, 1, "John", "Doe", 20, "john@example.com");
+            insertCustomer(connection, 1, "John", "Doe", 200, "john@example.com");
+            insertCustomer(connection, 2, "Anthony", "Chirichella", 200, "john@example.com");
+            insertCustomer(connection, 2, "Joe", "Oakes", 600, "john@example.com");
+
 
             // Read
             List<Customer> customers = getAllcustomers(connection);
@@ -35,7 +38,7 @@ public class MySQL {
             }
 
             // Update
-            updateCustomer(connection, 1, "Updated First Name");
+            updateCustomer(connection, 1, "Updated First Name (john doe)");
 
             // Read again
             customers = getAllcustomers(connection);
