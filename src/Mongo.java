@@ -1,4 +1,3 @@
-
 /*  * Project: Lab3
     * Purpose Details: Mongo and MySQL implementation
     * Course: IST 242
@@ -7,8 +6,6 @@
     * Last Date Changed: 3/1/26
     * Rev: 1
  */
-
-
 
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoClient;
@@ -40,6 +37,12 @@ public class Mongo {
                     .append("loyalty_points", 200)
                     .append("email", "anthony@example.com");
 
+            Document customer3 = new Document("first_name", "Joe")
+                    .append("last_name", "Oakes")
+                    .append("loyalty_points", 600)
+                    .append("email", "JoeOakes@example.com");
+
+
             collection.insertOne(customer1);
             collection.insertOne(customer2);
 
@@ -54,7 +57,7 @@ public class Mongo {
                     set("first_name", "Updated First Name"));
 
             // Read again
-            System.out.println("=== After Update ===");
+            System.out.println("After Update");
             for (Document customer : collection.find()) {
                 System.out.println(customer.toJson());
             }
@@ -62,7 +65,7 @@ public class Mongo {
             // Delete updated record
             collection.deleteOne(eq("first_name", "Updated First Name"));
 
-            System.out.println("=== After Delete ===");
+            System.out.println("After Delete");
             for (Document customer : collection.find()) {
                 System.out.println(customer.toJson());
             }

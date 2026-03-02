@@ -3,7 +3,7 @@
 
 
 
-/*   * Project: Lab3
+/*  * Project: Lab3
     * Purpose Details: Mongo and MySQL implementation
     * Course: IST 242
     * Author: Anthony Chirichella
@@ -13,16 +13,16 @@
  */
 
 
+import org.bson.Document;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Customer c1 = new Customer(1, "Anthony", "Chirichella", 200, "anthony@example.com");
+        Customer c2 = new Customer(2, "Joe", "Oakes", 200, "joeoakes@example.com");
+        Customer c3 = new Customer(3, "Nittany", "Lion", 200, "NittanyLion@example.com");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+
+
     }
 }
