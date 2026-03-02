@@ -25,6 +25,7 @@ public class Mongo {
             // Use cleaner database name
             MongoDatabase database = mongoClient.getDatabase("ClothingStore");
             MongoCollection<Document> collection = database.getCollection("Customers");
+            collection.deleteMany(new Document());
 
             // Insert
             Document customer1 = new Document("first_name", "John")
@@ -45,6 +46,8 @@ public class Mongo {
 
             collection.insertOne(customer1);
             collection.insertOne(customer2);
+            collection.insertOne(customer3);
+
 
             // Read
             System.out.println("=== Initial Data ===");
@@ -53,7 +56,7 @@ public class Mongo {
             }
 
             // Update John
-            collection.updateOne(eq("first_name", "John"),
+            collection.updateOne(eq("first_name", "Joe"),
                     set("first_name", "Updated First Name"));
 
             // Read again

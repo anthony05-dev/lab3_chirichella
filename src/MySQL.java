@@ -28,7 +28,8 @@ public class MySQL {
             // Create
             insertCustomer(connection, 1, "John", "Doe", 200, "john@example.com");
             insertCustomer(connection, 2, "Anthony", "Chirichella", 200, "john@example.com");
-            insertCustomer(connection, 2, "Joe", "Oakes", 600, "john@example.com");
+            insertCustomer(connection, 3, "Joe", "Oakes", 600, "john@example.com");
+            insertCustomer(connection, 4, "Nittany", "Lion", 600, "nittanyloin@example.com");
 
 
             // Read
